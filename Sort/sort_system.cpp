@@ -37,12 +37,12 @@ bool ComparToAccerleration(Car A, Car B)
 
 bool ComapreToOriginOrMpg(Car A, Car B)
 {
-    if(A.origin == B.origin) //제조구역이 같다면 mpg 비교
+    if(A.origin == B.origin) //?????????? ????? mpg ??
     {
         return A.mpg < B.mpg;   
     }
 
-    //의외에는 제조구역 순으로 비교
+    //?????? ???????? ?????? ??
     return A.origin < B.origin;
 
 }
@@ -65,21 +65,21 @@ int main()
     cin >> iter;
     Car array_Car[iter];
 
-    //입력 반복
+    //??? ???
     for (int i = 0; i < iter; ++i)
     {
-        string name; //오류
+        string name; //????
         float mpg;
         float accerleration;
         int origin;
 
-        //차종 정보 받아오기
-        // cin에서 받아온 \n은 제외해줘 오류를 없애준다.
+        //???? ???? ??????
+        // cin???? ???? \n?? ???????? ?????? ???????.
         cin.ignore(32767, '\n');
         getline(cin, name);
         cin >> mpg >> accerleration >> origin;
 
-        //배열에 차종 정보 입력
+        //?占쏙옙?? ???? ???? ???
         array_Car[i].name = name;
         array_Car[i].mpg = mpg;
         array_Car[i].accerleration = accerleration;
@@ -88,17 +88,17 @@ int main()
 
     sort(array_Car,array_Car + iter,CompareToName);
 
-    cout << "차종 알파벳 순 : \n";
+    cout << "???? ????? ?? : \n";
     CoutForCarInformation(array_Car,iter);
 
     sort(array_Car, array_Car + iter, ComparToAccerleration);
 
-    cout << "가속시간 순 : \n";
+    cout << "????占쏙옙? ?? : \n";
     CoutForCarInformation(array_Car,iter);
 
     sort(array_Car,array_Car + iter, ComapreToOriginOrMpg);
 
-    cout << "제조지역 순 => 연비 순\n";
+    cout << "???????? ?? => ???? ??\n";
     CoutForCarInformation(array_Car,iter);
 
     return 0;

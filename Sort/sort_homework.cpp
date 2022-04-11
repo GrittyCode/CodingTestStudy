@@ -24,7 +24,7 @@ void Insertion_Sort(vector<int> v)
         }
     }
 
-    cout << "<< ¼±ÅÃÁ¤·Ä·Î ³»¸²Â÷¼ø >>\n";
+    cout << "<< ì‚½ìž… ì •ë ¬ ë‚´ë¦¼ì°¨ìˆœ >>\n";
     for(int i = 0; i < v.size(); ++i)
     {
         cout << v[i] << ' ';    
