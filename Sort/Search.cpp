@@ -9,7 +9,8 @@ int BinarySearchFromMapList(map<int,string> map, int key_value, int low, int hig
 {
     if(low >= high) return -1; //찾는 값의 키가 없을 땐 -1을 돌려준다.
 
-    int mid = (low + high) / 2; 
+    int mid = (low + high) / 2;
+    if(key_value > map[mid][0]) 
 }
 
 
